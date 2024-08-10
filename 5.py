@@ -1,24 +1,28 @@
-numNice = 0
 
-with open("input") as f:
-    for line in f:
-        pairs = {}
-        between = False
-        pairOfPairs = False
-        string = line.strip()
-        # string = "ieodomkazucvgmuy"
-        for i in range(len(string)-1):
-            if i > 0 and string[i-1] == string[i+1]:
-                between = True
-            if string[i:i+2] in pairs:
-                firstIndex = pairs[string[i:i+2]]
-                if firstIndex != i-1:
-                    pairOfPairs = True
-            else:
-                pairs[string[i:i+2]] = i
-        numNice += pairOfPairs and between
 
-print(numNice)
+
+
+# numNice = 0
+#
+# with open("input") as f:
+#     for line in f:
+#         pairs = {}
+#         between = False
+#         pairOfPairs = False
+#         string = line.strip()
+#         # string = "ieodomkazucvgmuy"
+#         for i in range(len(string)-1):
+#             if i > 0 and string[i-1] == string[i+1]:
+#                 between = True
+#             if string[i:i+2] in pairs:
+#                 firstIndex = pairs[string[i:i+2]]
+#                 if firstIndex != i-1:
+#                     pairOfPairs = True
+#             else:
+#                 pairs[string[i:i+2]] = i
+#         numNice += pairOfPairs and between
+#
+# print(numNice)
 
 
 
